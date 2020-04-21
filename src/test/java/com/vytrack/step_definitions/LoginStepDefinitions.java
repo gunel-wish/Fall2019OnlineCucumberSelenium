@@ -6,6 +6,7 @@ import com.vytrack.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class LoginStepDefinitions {
@@ -41,6 +42,12 @@ public class LoginStepDefinitions {
         Assert.assertEquals("Dashboard", Driver.getDriver().getTitle());
         Driver.closeDriver();
     }
+
+    @Given("user is on the login page")
+    public void user_is_on_the_login_page() {
+
+    }
+
 
 
 
