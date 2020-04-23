@@ -36,13 +36,6 @@ public class LoginStepDefinitions {
     }
 
 
-    @When("user logs in as a driver")
-    public void user_logs_in_as_a_driver() {
-
-    }
-
-
-
     @Then("user should verify that title is a Dashboard")
     public void user_should_verify_that_title_is_a_Dashboard() {
         System.out.println("Verify that title is a Dashboard");
@@ -51,6 +44,13 @@ public class LoginStepDefinitions {
 
 
     }
+
+    @When("user logs in as a driver")
+    public void user_logs_in_as_a_driver() {
+        System.out.println("Login as a driver");
+        loginPage.login("user19","userUser123");
+    }
+
 
 
 
