@@ -7,10 +7,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-     glue = "com/vytrack/step_definitions",
+        glue = "com/vytrack/step_definitions",
         features = "src/test/resources/features",
         dryRun = false,
-       strict = true
+        strict = true
 
 
 )
