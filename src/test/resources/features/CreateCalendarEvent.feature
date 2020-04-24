@@ -1,7 +1,6 @@
 @activities
 Feature: Create calendar event
-  As user, I want to able to create calendar events.
-
+  As user, I want to be able to create calendar events.
 
   Scenario: Create calendar event as sales manager
     Given user is on the login page
