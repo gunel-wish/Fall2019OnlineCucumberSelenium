@@ -11,8 +11,12 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         dryRun = false,
         strict = true,
-        tags = "",
+        tags = "@login_with_params",
         plugin = "html:target/cucumber-html-report"
+
+
+
+
 
 
 )
