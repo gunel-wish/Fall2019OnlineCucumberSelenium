@@ -31,17 +31,16 @@ public class Hooks {
 
 
     @After
-    public void tearDown(Scenario scenario){
+    public void tearDown(Scenario scenario) {
         //how to check if scenario failed
-        if(scenario.isFailed()){
-            TakesScreenshot takesScreenshot=(TakesScreenshot)  Driver.getDriver() ;
+        if (scenario.isFailed()) {
+            TakesScreenshot takesScreenshot = (TakesScreenshot) Driver.getDriver();
             byte[] image = takesScreenshot.getScreenshotAs(OutputType.BYTES);
             //attach screenshot to the report
-            scenario.embed(image,"image/png", scenario.getName());
+            scenario.embed(image, "image/png", scenario.getName());
         }
         System.out.println("Test clean up");
         Driver.closeDriver();
-
     }
 
 
