@@ -37,8 +37,8 @@ public class CreateCalendarEventStepDefinitions {
 
     }
 
-    @Then("user click on save and close button")
-    public void user_click_on_save_and_close_button() {
+    @Then("user click on saved and close button")
+    public void user_click_on_saved_and_close_button() {
         System.out.println("User click on save and close button");
         calendarEventsPage.clickOnSaveAndClose();
     }
@@ -64,6 +64,12 @@ public class CreateCalendarEventStepDefinitions {
     Assert.assertEquals(dataTable.get("description"), calendarEventsPage.getGeneralInfoDescriptionText());
     Assert.assertEquals(dataTable.get("title") , calendarEventsPage.getGeneralInfoTitleText());
     }
+
+
+
+
+
+
 
 
 
