@@ -129,4 +129,5 @@ public class CalendarEventsPage extends AbstractPageBase {
         BrowserUtilities.scrollTo(startDate);
         return startDate.getAttribute("value");
     }
+
 }

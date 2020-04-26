@@ -29,16 +29,18 @@ public class CreateCalendarEventStepDefinitions {
         calendarEventsPage.enterCalendarEventDescription(string);
     }
 
-    @Then("user click on saved and close button")
-    public void user_click_on_saved_and_close_button() {
-        System.out.println("User click on save and close button");
-       calendarEventsPage.clickOnSaveAndClose();
-    }
+
 
     @Then("user verify that description of new calendar event is {string}")
     public void user_verify_that_description_of_new_calendar_event_is(String string) {
         Assert.assertEquals(string,calendarEventsPage.getGeneralInfoDescriptionText());
 
+    }
+
+    @Then("user click on save and close button")
+    public void user_click_on_save_and_close_button() {
+        System.out.println("User click on save and close button");
+        calendarEventsPage.clickOnSaveAndClose();
     }
 
     @Then("user verify that title  of new calendar event is {string}")

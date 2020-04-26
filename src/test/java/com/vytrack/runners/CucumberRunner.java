@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         glue = "com/vytrack/step_definitions",
         features = "src/test/resources/features",
-        dryRun = false,
+        dryRun = true,
         strict = false,
         tags = "@create_calendar_event_2",
         plugin = {"html:target/default-report",
