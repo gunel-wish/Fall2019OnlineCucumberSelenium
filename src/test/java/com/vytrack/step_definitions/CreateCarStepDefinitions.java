@@ -2,8 +2,6 @@ package com.vytrack.step_definitions;
 
 import com.vytrack.pages.fleet.VehiclesPage;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.it.Ma;
-import org.apache.commons.io.output.ProxyWriter;
 import org.junit.Assert;
 
 import java.util.List;
@@ -25,23 +23,45 @@ public class CreateCarStepDefinitions {
 //            | License Plate | Driver    | Location    | Model Year | Color |
 //            | SDET          | Pro Racer | Rome, Italy | 2020       | Red   | 0 row
 
-    @Then("user creates a car which following info:")
-    public void user_creates_a_car_which_following_info(List<Map<String, String>> dataTable) {
+ //   @Then("user creates a car which following info:")
+//    public void user_creates_a_car_which_following_info(List<Map<String, String>> dataTable) {
+//        System.out.println(dataTable);
+ //       for (Map<String, String> row : dataTable) {
+  //          vehiclesPage.setLicencePlateInput(row.get("License Plate"));
+
+  //          vehiclesPage.setDriverInput(row.get("Driver"));
+
+  //          vehiclesPage.setLocationInput(row.get("Location"));
+
+   //         vehiclesPage.setModelYear(row.get("Model Year"));
+
+  //          vehiclesPage.setColor(row.get("Color"));
+            //click to save new car
+   //         vehiclesPage.clickOnSaveAndClose();
+    //    }
+   // }
+
+
+    @Then("user creates a car with following info:")
+    public void user_creates_a_car_with_following_info(List<Map<String, String>> dataTable) {
         System.out.println(dataTable);
         for (Map<String, String> row : dataTable) {
-            vehiclesPage.setLicencePlateInput(row.get("License Plate"));
+                    vehiclesPage.setLicencePlateInput(row.get("License Plate"));
 
-            vehiclesPage.setDriverInput(row.get("Driver"));
+                    vehiclesPage.setDriverInput(row.get("Driver"));
 
-            vehiclesPage.setLocationInput(row.get("Location"));
+                      vehiclesPage.setLocationInput(row.get("Location"));
 
-            vehiclesPage.setModelYear(row.get("Model Year"));
+                 vehiclesPage.setModelYear(row.get("Model Year"));
 
-            vehiclesPage.setColor(row.get("Color"));
+                   vehiclesPage.setColor(row.get("Color"));
             //click to save new car
-            vehiclesPage.clickOnSaveAndClose();
-        }
+                    vehiclesPage.clickOnSaveAndClose();
+                }
+
     }
+
+
 
     @Then("user verifies that car info is displayed:")
     public void user_verifies_that_car_info_is_displayed(List<Map<String, String>> dataTable) {

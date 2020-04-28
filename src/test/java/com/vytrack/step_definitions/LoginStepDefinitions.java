@@ -19,7 +19,7 @@ public class LoginStepDefinitions {
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
         System.out.println("Open login page");
-        String URL = ConfigurationReader.getProperty("qa1");
+        String URL = ConfigurationReader.getProperty("qa3");
         Driver.getDriver().get(URL);
 
     }
@@ -39,11 +39,10 @@ public class LoginStepDefinitions {
 
     @Then("user should verify that title is a Dashboard")
     public void user_should_verify_that_title_is_a_Dashboard() {
-        BrowserUtilities.waitForPageToLoad(10);
-        BrowserUtilities.waitForPageToLoad(2);
         System.out.println("Verify that title is a Dashboard");
+        BrowserUtilities.waitForPageToLoad(10);
+        BrowserUtilities.wait(2);
         Assert.assertEquals("Dashboard",Driver.getDriver().getTitle());
-
 
 
     }
@@ -79,16 +78,19 @@ public class LoginStepDefinitions {
 
 
     @When("user logs in as {string}")
-    public void user_logs_in_as(String string) {
-      loginPage.login();
+    public void user_logs_in_as(String userType) {
+      loginPage.login(userType);
 
     }
 
     @Then("user verifies that page title is {string}")
     public void user_verifies_that_page_title_is(String string) {
         System.out.println("Verify that page title is: " + string);
-        Assert.assertEquals(string, Driver.getDriver().getTitle());
+      // Assert.assertEquals(string ,Driver.getDriver().getTitle());
+       Assert.assertEquals(string , Driver.getDriver().getTitle());
+
     }
+
 
 
 
