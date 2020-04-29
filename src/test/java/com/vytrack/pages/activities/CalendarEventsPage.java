@@ -15,6 +15,7 @@ import java.util.List;
 public class CalendarEventsPage extends AbstractPageBase {
 
 
+
     @FindBy(css = "[title='Create Calendar event']")
     private WebElement createCalendarEvent;
 
@@ -129,5 +130,4 @@ public class CalendarEventsPage extends AbstractPageBase {
         BrowserUtilities.scrollTo(startDate);
         return startDate.getAttribute("value");
     }
-
 }
