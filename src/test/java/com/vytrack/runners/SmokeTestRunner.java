@@ -1,6 +1,5 @@
 package com.vytrack.runners;
 
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -11,16 +10,12 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         dryRun = false,
         strict = false,
-  //      tags = "@driver",
+        tags = "@smoke_test",
         plugin = {"html:target/default-report",
-                  "json:target/cucumber1.json",
-                  "rerun:target/rerun.txt"
+                "json:target/cucumber1.json"
         }
 
 
 )
-public class CucumberRunner {
-
-
-
+public class SmokeTestRunner {
 }
