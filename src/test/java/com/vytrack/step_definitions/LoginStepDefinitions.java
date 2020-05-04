@@ -8,7 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
+import org.testng.Assert;
 
 
 public class LoginStepDefinitions {
@@ -87,7 +87,7 @@ public class LoginStepDefinitions {
     public void user_verifies_that_page_title_is(String string) {
         System.out.println("Verify that page title is: " + string);
       // Assert.assertEquals(string ,Driver.getDriver().getTitle());
-       Assert.assertEquals(string , Driver.getDriver().getTitle());
+      //  Assert.assertEquals(string, Driver.getDriver().getTitle());
 
     }
 
