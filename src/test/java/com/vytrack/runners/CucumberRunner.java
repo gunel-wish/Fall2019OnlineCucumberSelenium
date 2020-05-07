@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
         features = "src/test/resources/features",
         dryRun = false,
         strict = false,
-       tags = "@login_with_params",
+       tags = "@login",
         plugin = {"html:target/default-report",
                   "json:target/cucumber1.json",
                   "rerun:target/rerun.txt"

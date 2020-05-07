@@ -7,6 +7,7 @@ Feature: Login
 #  Test + DataProvider = Scenario Outline + Examples table
 
   Background: open login page
+
     Given user is on the login page
 
   @sales_manager

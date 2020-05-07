@@ -19,7 +19,7 @@ public class Hooks {
 
 
     @Before( value = "@driver", order = 1)
-    public void specialSetup(){
+    public void  specialSetup(){
         System.out.println("Setup for driver");
     }
 

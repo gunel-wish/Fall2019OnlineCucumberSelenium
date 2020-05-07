@@ -87,7 +87,7 @@ public class LoginStepDefinitions {
     public void user_verifies_that_page_title_is(String string) {
         System.out.println("Verify that page title is: " + string);
       // Assert.assertEquals(string ,Driver.getDriver().getTitle());
-      //  Assert.assertEquals(string, Driver.getDriver().getTitle());
+        Assert.assertEquals(string, Driver.getDriver().getTitle());
 
     }
 
